@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=Megrim&display=swap');
+
+:root {
+  --color-white: #fff;
+  --color-grey: #939598;
+  --color-green: #cdf400;
+  --color-red: #8b0000;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+  background-color: #fff;
+}
+
+.body-container {
+  width: 100%;
+}
+
+.body-section {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.section-pre-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  color: var(--color-grey);
+}
+
+.section-pre-header a {
+  color: var(--color-grey);
+  text-decoration: none;
+}
+
+.language-menu.hidden {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.section-title {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  font-family: 'Megrim', sans-serif;
+  font-size: 80px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-install, .section-bio {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  color: var(--color-grey);
+  box-sizing: border-box;
+}
+
+.install-column {
+  width: 40%;
+}
+
+.install-column.icons {
+  width: 10%;
+  border: 1px solid #000;
+  padding: 0 20px;
+}
+
+.install-icon-wrapper {
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: cornflowerblue;
+  border: 1px solid #000;
+  margin: 10px 0;
+}
+
+.install-column.titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.section-about {
+  background-color: var(--color-green);
+  color: var(--color-grey);
+}
+
+.about-title {
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.bio-column {
+  width: 33%;
+}
+
+.bio-column.images {
+  padding: 0 20px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+
+.bio-image {
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: cornflowerblue;
+  border: 1px solid #000;
+}
+
+.section-email {
+  background-color: var(--color-green);
+  color: var(--color-grey);
+  text-align: center;
+}
+
+.email-form {
+  padding: 40px 0;
+}
+
+.email-thank-you {
+  font-size: 40px;
+  font-family: 'Megrim', sans-serif;
+  color: var(--color-white);
+}
+
+.email-thank-you.hidden {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.signup-error {
+  opacity: 0;
+  color: var(--color-red);
+  font-size: 13px;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.sign-up-column {
+  width: 33%;
+}
+
+.sign-up-column.label {
+  text-align: right;
+}
+
+.signup-form label {
+  display: block;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+
+.signup-form input {
+  width: 100%;
+  border: 0;
+  line-height: 1.7;
+  color: var(--color-grey);
+}
+
+.signup-form input:focus {
+  outline:none;
+}
+
+.signup-button-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.signup-button-image {
+  cursor: pointer;
+  margin: 0;
+  margin-left: 20px;
+  padding-bottom: 24px;
+  background-image: url(../imgs/arrows.svg);
+  background-position: left bottom;
+}
+
+#mc_embed_signup {
+  position: absolute;
+  top: -1000px;
+  left: 50%;
+}
