@@ -16,7 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const inputGroup = document.getElementById('mc-input-group');
 
   const scrollToBottom = () => {
-    window.scrollTo(0, document.body.offsetHeight);
+    const scrollOptions = {
+      top: document.body.scrollHeight,
+      left: 0,
+      behavior: 'instant'
+    };
+    window.scrollTo(scrollOptions);
+    document.body.scrollTo(scrollOptions);
+    myInput.scrollIntoView(scrollOptions);
   };
 
   const showError = (errorMessage) => {
