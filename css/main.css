@@ -21,11 +21,20 @@ html, body {
 
 .body-section {
   width: 100%;
-  padding: 20px;
+  padding: 40px 0 35px;
   box-sizing: border-box;
 }
 
+.body-section.with-text {
+  --side-pads: max(
+    20px, (100% - 900px) / 2
+  );
+  padding-left: var(--side-pads);
+  padding-right: var(--side-pads);
+}
+
 .section-pre-header {
+  padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
