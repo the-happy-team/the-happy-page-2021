@@ -166,6 +166,7 @@ a {
 }
 
 .bio-column.images {
+  max-width: 200px;
   padding: 0 20px;
   box-sizing: border-box;
   border: 1px solid #000;
@@ -174,8 +175,19 @@ a {
 .bio-image {
   width: 100%;
   padding-bottom: 100%;
-  background-color: cornflowerblue;
-  border: 1px solid #000;
+  background-image: url('../assets/imgs/mari.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+.bio-image.tgh {
+    background-image: url('../assets/imgs/tgh.jpg');
+}
+
+.bio-image + .bio-image {
+  margin-top: 16px;
 }
 
 .section-email {
