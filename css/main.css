@@ -60,14 +60,14 @@ a {
 }
 
 .section-video {
+  display: flex;
   width: 100%;
-  max-height: 400px;
   padding: 0;
-  overflow: hidden;
 }
 
 .video-container {
   width: 100%;
+  height: auto;
   outline: 0;
 }
 
