@@ -78,7 +78,7 @@ a {
 .video-image {
   width: 100%;
   padding-bottom: 33%;
-  background-image: url('../imgs/video-image.jpg');
+  background-image: url('../assets/imgs/video-image.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -132,7 +132,7 @@ a {
   width: 80%;
   padding-bottom: 100%;
   margin: 0 auto;
-  background-image: url('../imgs/favicon.png');
+  background-image: url('../assets/imgs/favicon.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -255,7 +255,7 @@ a {
   margin: 0;
   margin-left: 20px;
   padding-bottom: 24px;
-  background-image: url('../imgs/arrows.svg');
+  background-image: url('../assets/imgs/arrows.svg');
   background-position: left bottom;
 }
 
