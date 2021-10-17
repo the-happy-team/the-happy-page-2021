@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     myError.style.opacity = '1';
     myError.innerHTML = errorMessage;
     scrollToBottom();
+    setTimeout(scrollToBottom, 200);
   };
 
   const successObserver = new MutationObserver((mutationsList, observer) => {
