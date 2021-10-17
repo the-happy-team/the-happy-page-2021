@@ -160,7 +160,8 @@ a {
 }
 
 .about-title {
-  margin-bottom: 12px;
+  margin-bottom: 18px;
+  margin-top: -10px;
   color: var(--color-white);
   text-transform: uppercase;
 }
