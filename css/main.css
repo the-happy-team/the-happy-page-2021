@@ -286,6 +286,21 @@ a {
     font-size: 45px;
   }
 
+  .section-install {
+    flex-wrap: wrap;
+  }
+
+  .install-column.text {
+    flex: auto;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .install-column.icons {
+    max-width: 100px;
+    padding-left: 0;
+  }
+
   .email-form {
     padding: 28px 0;
   }
