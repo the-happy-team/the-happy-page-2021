@@ -178,7 +178,7 @@ a {
 }
 
 .bio-image.tgh {
-    background-image: url('../assets/imgs/tgh.jpg');
+  background-image: url('../assets/imgs/tgh.jpg');
 }
 
 .bio-image + .bio-image {
@@ -220,7 +220,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   text-align: center;
   box-sizing: border-box;
 }
@@ -235,6 +235,7 @@ a {
 
 .signup-form label {
   display: block;
+  font-size: 16px;
   margin-right: 20px;
   text-transform: uppercase;
 }
@@ -273,4 +274,35 @@ a {
   opacity: 0;
   pointer-events: none;
   user-select: none;
+}
+
+
+@media screen and (max-width: 650px) {
+  .body-section {
+    padding: 28px 0 23px;
+  }
+
+  .section-title {
+    font-size: 45px;
+  }
+
+  .email-form {
+    padding: 28px 0;
+  }
+
+  .sign-up-column {
+    width: 20%;
+  }
+
+  .sign-up-column.input {
+    flex: 1;
+  }
+
+  .signup-form label {
+    font-size: 14px;
+  }
+
+  .email-thank-you {
+    font-size: 28px;
+  }
 }
