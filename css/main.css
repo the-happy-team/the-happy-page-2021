@@ -310,6 +310,10 @@ a {
     display: none;
   }
 
+  .section-video {
+    padding: 0;
+  }
+
   .section-title {
     font-size: 45px;
   }
