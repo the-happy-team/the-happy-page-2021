@@ -3,6 +3,7 @@
 :root {
   --color-white: #fff;
   --color-grey: #939598;
+  --color-grey-dark: #636568;
   --color-green: #cdf400;
   --color-red: #8b0000;
 }
@@ -13,6 +14,11 @@ html, body {
   box-sizing: border-box;
   font-family: 'Exo 2', sans-serif;
   background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-grey-dark);
 }
 
 .body-container {
@@ -98,12 +104,13 @@ html, body {
 }
 
 .install-column {
-  width: 40%;
+  flex: 1;
 }
 
 .install-column.icons {
-  width: 10%;
+  max-width: 120px;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .install-icon-wrapper {
@@ -149,12 +156,13 @@ html, body {
 }
 
 .about-title {
+  margin-bottom: 12px;
   color: var(--color-white);
   text-transform: uppercase;
 }
 
 .bio-column {
-  width: 33%;
+  flex: 1;
 }
 
 .bio-column.images {
