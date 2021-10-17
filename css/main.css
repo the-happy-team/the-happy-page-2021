@@ -104,6 +104,9 @@ a {
 }
 
 .install-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   flex: 1;
 }
 
@@ -141,13 +144,6 @@ a {
 
 .install-icon.flip {
   transform: rotate(180deg);
-}
-
-
-.install-column.titles {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 }
 
 .section-about {
