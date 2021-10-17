@@ -196,15 +196,16 @@ a {
 }
 
 .email-thank-you {
+  opacity: 1;
   font-size: 40px;
   font-family: 'Megrim', sans-serif;
   color: var(--color-white);
+  text-transform: uppercase;
+  transition: opacity .15s linear;
 }
 
 .email-thank-you.hidden {
   opacity: 0;
-  pointer-events: none;
-  user-select: none;
 }
 
 .signup-error {
@@ -268,6 +269,8 @@ a {
 
 #mc_embed_signup {
   position: absolute;
-  top: -1000px;
-  left: 50%;
+  bottom: 1000px;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
 }

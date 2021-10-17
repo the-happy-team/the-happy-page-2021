@@ -15,10 +15,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const successResponse = document.getElementById('mce-success-response');
   const inputGroup = document.getElementById('mc-input-group');
 
+  const scrollToBottom = () => {
+    window.scrollTo(0, document.body.offsetHeight);
+  };
+
+  const showError = (errorMessage) => {
+    myError.style.opacity = '1';
+    myError.innerHTML = errorMessage;
+    scrollToBottom();
+  };
+
   const successObserver = new MutationObserver((mutationsList, observer) => {
     if (!successResponse.style.display.includes('none')) {
       myInput.value = '';
-      // TODO : display thank you !
+      setTimeout(() => {
+        document.getElementById('my-thank-you').classList.remove('hidden');
+        scrollToBottom();
+      }, 200);
     }
   });
 
@@ -26,8 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('error display: ' + errorResponse.style.display);
     if (!errorResponse.style.display.includes('none')) {
       console.log('error!!');
-      myError.style.opacity = '1';
-      myError.innerHTML = errorResponse.innerHTML;
+      showError(errorResponse.innerHTML);
     }
   });
 
@@ -35,8 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('error inline display: ' + errorInlineResponse.style.display);
     if (!errorInlineResponse.style.display.includes('none')) {
       console.log('inline error!!');
-      myError.style.opacity = '1';
-      myError.innerHTML = errorInlineResponse.innerHTML;
+      showError(errorInlineResponse.innerHTML);
     }
   });
 
@@ -48,8 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
       errorInlineObserver.observe(errorInlineResponse, { attributes : true });
       if (!errorInline.style.display.includes('none')) {
         console.log('first inline error!!');
-        myError.style.opacity = '1';
-        myError.innerHTML = errorInlineResponse.innerHTML;
+        showError(errorInlineResponse.innerHTML);
       }
     }
   });
@@ -58,13 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
   errorObserver.observe(errorResponse, { attributes : true, attributeFilter : ['style'] });
   inputGroupObserver.observe(inputGroup, { childList : true });
 
-  myInput.addEventListener('keyup', () => {
-    mcInput.value = myInput.value;
-    myError.style.opacity = '0';
+  myInput.addEventListener('keyup', (event) => {
+    if (event.key === "Enter") {
+      mcSubmit.click();
+    } else {
+      mcInput.value = myInput.value;
+      myError.style.opacity = '0';
+    }
   });
 
   mySubmit.addEventListener('click', () => {
     mcSubmit.click();
-    // TODO: scroll down on error
   });
 });
