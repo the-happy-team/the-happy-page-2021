@@ -280,7 +280,7 @@ a {
 
 #mc_embed_signup {
   position: absolute;
-  bottom: 1000px;
+  z-index: -100;
   opacity: 0;
   pointer-events: none;
   user-select: none;

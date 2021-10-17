@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const myInput = document.getElementById('my-email-input');
   const mySubmit = document.getElementById('my-signup-button');
   const myError = document.getElementById('my-signup-error');
+  const myThankYou = document.getElementById('my-thank-you');
 
   const mcInput = document.getElementById('mce-EMAIL');
   const mcSubmit = document.getElementById('mc-embedded-subscribe');
@@ -15,30 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const successResponse = document.getElementById('mce-success-response');
   const inputGroup = document.getElementById('mc-input-group');
 
-  const scrollToBottom = () => {
-    const scrollOptions = {
-      top: document.body.scrollHeight,
-      left: 0,
-      behavior: 'instant'
-    };
-    window.scrollTo(scrollOptions);
-    document.body.scrollTo(scrollOptions);
-    myInput.scrollIntoView(scrollOptions);
-  };
-
   const showError = (errorMessage) => {
     myError.style.opacity = '1';
     myError.innerHTML = errorMessage;
-    scrollToBottom();
-    setTimeout(scrollToBottom, 200);
   };
 
   const successObserver = new MutationObserver((mutationsList, observer) => {
     if (!successResponse.style.display.includes('none')) {
       myInput.value = '';
       setTimeout(() => {
-        document.getElementById('my-thank-you').classList.remove('hidden');
-        scrollToBottom();
+        myThankYou.classList.remove('hidden');
+        myThankYou.scrollIntoView({ behavior: 'smooth' });
       }, 200);
     }
   });
